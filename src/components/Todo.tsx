@@ -39,17 +39,17 @@ export default function Todo() {
 
   return (
     <main className="w-full  text-slate-200 text-center">
-      <h1 className="font-extrabold text-8xl pt-20">ToDoList.</h1>
+      <h1 className="font-extrabold text-6xl md:text-8xl pt-20">ToDoList.</h1>
       <p className="pb-20">
         {date}/{month + 1}/{year} {weekNames[week]}
       </p>
-      <div>
+      <div className="w-[90%]">
         <input
           type="text"
           onChange={(e) => setData(e.target.value)}
           value={data}
           onKeyDown={handleKeyPress}
-          className="bg-slate-800  rounded-md w-1/4 h-10 rounded-r-none"
+          className="bg-slate-800  rounded-md w-[50%] h-10 rounded-r-none"
         />
         <button
           onClick={putHandler}
@@ -58,7 +58,7 @@ export default function Todo() {
           +Add
         </button>
       </div>
-      <div className="flex flex-col gap-10 items-center justify-center w-full my-12">
+      <div className="flex flex-col gap-10 items-center justify-center   my-12">
         {todos.map((items: { data: string }, i) => {
           return <List key={i} para={items} />;
         })}
