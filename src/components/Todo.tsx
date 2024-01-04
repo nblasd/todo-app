@@ -59,8 +59,8 @@ export default function Todo() {
         </button>
       </div>
       <div className="flex flex-col gap-10 items-center justify-center w-full my-12">
-        {todos.map((items: { data: string }) => {
-          return <List para={items} />;
+        {todos.map((items: { data: string }, i) => {
+          return <List key={i} para={items} />;
         })}
       </div>
     </main>
