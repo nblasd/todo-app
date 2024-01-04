@@ -31,8 +31,14 @@ export default function Todo() {
     setData("");
   };
 
+  const handleKeyPress = (e: React.KeyboardEvent) => {
+    if (e.key == "Enter") {
+      putHandler();
+    }
+  };
+
   return (
-    <main className="bg-slate-950 w-full h-screen text-slate-200 text-center">
+    <main className="w-full  text-slate-200 text-center">
       <h1 className="font-extrabold text-8xl pt-20">ToDoList.</h1>
       <p className="pb-20">
         {date}/{month + 1}/{year} {weekNames[week]}
@@ -42,6 +48,7 @@ export default function Todo() {
           type="text"
           onChange={(e) => setData(e.target.value)}
           value={data}
+          onKeyDown={handleKeyPress}
           className="bg-slate-800  rounded-md w-1/4 h-10 rounded-r-none"
         />
         <button
