@@ -1,6 +1,6 @@
 # TODO-APP
 
-Hello there i have maked this todo-app but there isn't any database connected with it so everytime you reload the website all of your data will be removed.
+Hello there i have made this todo-app but there isn't any database connected with it so everytime you reload the website all of your data will be removed.
 
 # My tech stack:
 
